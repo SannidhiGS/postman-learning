@@ -1,0 +1,63 @@
+POSTMAN – BASIC INFORMATION
+
+Postman is a popular API development and testing tool used by developers
+to design, test, and manage REST APIs. It allows users to send HTTP requests
+to a server and analyze the responses in an easy and user-friendly way.
+
+--------------------------------------------------
+
+WHAT IS AN API?
+API (Application Programming Interface) is a medium that allows
+different software applications to communicate with each other.
+For example, a frontend application communicates with a backend
+server using APIs.
+
+--------------------------------------------------
+
+WHY POSTMAN IS USED
+Postman is used to:
+- Test REST APIs without building a frontend
+- Send HTTP requests easily
+- Debug backend services
+- Verify API responses and status codes
+- Automate API testing using collections
+
+--------------------------------------------------
+
+FEATURES OF POSTMAN
+- Supports HTTP methods like GET, POST, PUT, DELETE
+- Allows sending JSON request bodies
+- Provides response validation
+- Supports environment variables
+- Collection-based API organization
+
+--------------------------------------------------
+
+POSTMAN IN REAL-TIME PROJECTS
+In real-time projects, Postman is used to test backend APIs before
+integrating them with frontend applications. It helps developers
+ensure APIs work correctly, securely, and efficiently.
+
+--------------------------------------------------
+
+ADVANTAGES OF POSTMAN
+- Easy to use interface
+- Saves development time
+- No UI dependency
+- Works with all backend technologies
+- Widely used in the industry
+
+--------------------------------------------------
+
+HOW THIS PROJECT USES POSTMAN
+In this project, Postman is used to:
+- Test REST APIs
+- Perform CRUD operations
+- Validate request and response data
+- Check backend functionality
+
+--------------------------------------------------
+
+AUTHOR
+Name: Sannidhi G S
+Role: Java / Full Stack Developer (Fresher)
