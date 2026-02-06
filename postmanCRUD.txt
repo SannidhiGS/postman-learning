@@ -1,0 +1,149 @@
+POSTMAN – API TESTING & CRUD PRACTICE
+
+WHAT IS POSTMAN?
+Postman is a popular API development and testing tool used by frontend developers, backend developers, and QA / API testers.
+It helps in creating, testing, and debugging APIs and supports all major HTTP methods.
+Postman is free to use and widely adopted in real-world projects.
+
+KEY FEATURES OF POSTMAN
+Perform CRUD operations (Create, Read, Update, Delete)
+Organize APIs using Collections and Folders
+Use Environment and Global Variables
+Automate data using Pre-request Scripts
+Validate responses using Tests
+Work with Public and Secured APIs
+
+
+LEARNING RESOURCES
+Official Learning Portal
+https://learning.postman.com/
+Free Public APIs for Practice
+https://freeapi.hashnode.space/api-guide
+https://api.freeapi.app
+
+
+EXAMPLE PUBLIC API (CRUD PRACTICE)
+https://api.freeapi.app/api/v1/public/randomjokes/{jokeId}
+
+This API is useful for practicing:
+GET requests
+Path parameters
+Response validation
+
+WORKING WITH COLLECTIONS IN POSTMAN
+
+Steps:
+Click Collections → + New
+Select Blank Collection
+Give a meaningful collection name
+Inside the collection:
+Create folders based on modules or features
+Add multiple requests inside each folder
+
+Example Structure:
+Postman-Practice
+Authentication
+Register
+Login
+Public-APIs
+
+Get Random Joke
+
+USING VARIABLES IN POSTMAN
+Instead of repeating the full URL every time, variables can be used.
+
+Variable Scopes:
+Global – Available everywhere
+Environment – Specific to an environment (Dev, QA, Prod)
+Collection – Limited to a collection
+Using variables improves reusability and maintainability.
+
+
+AUTHENTICATION & DATABASE INTERACTION
+In authentication-related requests (like Register), data sent through Postman is saved into the database.
+Ways to Send Data:
+
+Params
+Data added directly in key-value format
+
+Body
+Data sent as request body
+
+Raw (JSON)
+Most commonly used in real-time projects
+
+EXAMPLE JSON REQUEST BODY
+
+Static Data
+
+{
+"email": "luckygirl_02@domain.com
+",
+"password": "test@123",
+"username": "luckygirl_02"
+}
+
+Dynamic Data (Using Postman Variables)
+
+{
+"email": "{{$randomEmail}}",
+"password": "{{$randomPassword}}",
+"username": "johny"
+}
+
+USING PRE-REQUEST SCRIPT (DYNAMIC DATA GENERATION)
+
+Pre-request scripts run before sending the API request.
+They are useful for generating random data automatically.
+
+Example: Generate Random Username, Email & Password
+
+function getRandomUsername() {
+const letters = "abcdefghijklmnopqrstuvwxyz";
+let username = "";
+for (let i = 0; i < 8; i++) {
+username += letters.charAt(Math.floor(Math.random() * letters.length));
+}
+return username;
+}
+
+const username = getRandomUsername();
+
+pm.environment.set("username", username);
+pm.environment.set("email", username + "@gmail.com");
+pm.environment.set("password", "test@123");
+
+Request Body Using Variables
+
+{
+"email": "{{email}}",
+"password": "{{password}}",
+"username": "{{username}}"
+}
+
+BENEFITS OF USING SCRIPTS
+
+Avoid duplicate data errors
+
+Automatically generate unique users
+
+Save time during testing
+
+Useful for automation and CI/CD pipelines
+
+CONCLUSION
+
+Today’s work involved:
+
+Understanding Postman basics
+Creating collections and folders
+Using public APIs for practice
+Sending data via Params and JSON body
+Writing Pre-request scripts for random data
+Performing CRUD operations effectively
+
+This practice reflects real-world API testing and backend development workflow and is suitable for showcasing as a GitHub learning contribution.
+
+AUTHOR
+Name: Sannidhi G S
+Role: Java / Full Stack Developer (Fresher)
